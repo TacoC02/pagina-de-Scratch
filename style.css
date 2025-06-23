@@ -1,0 +1,69 @@
+
+.gravitas-one-regular {
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.winky-sans-uniquifier {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 643;
+    font-style: normal;
+  }
+
+  body {
+    background-image: url("imagenes/madera.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(7, 196, 7, 0.432);
+    border-radius: 0px 300px 0px 300px;
+}
+
+.img_titulo {
+    height: 250px;
+    width: 250px;
+    margin: 30px;
+}
+
+.let_titulo {
+    font-family: "Gravitas One", serif;
+    align-self: center;
+    margin: 60px;
+    color: yellow;
+    font-size: 90px;
+}
+
+p {
+    color: white;
+    background-color: rgba(0, 255, 0, 0.281);
+}
+
+h2 {
+    font-family: "Winky Sans", sans-serif;
+    color: rgb(204, 204, 0)
+}
+
+.lista {
+    background-color: rgba(0, 255, 0, 0.281);
+}
+
+.letras {
+    width: 700px;
+    height: 200px;
+}
+
+.nombre {
+    background-color: rgba(65, 105, 225, 0.452);
+    text-align: center;
+    border-radius: 50px;
+}
+
+ul {
+    color: white;
+}
