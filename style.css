@@ -1,67 +1,193 @@
 
-.gravitas-one-regular {
-    font-family: "Gravitas One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
-
-.winky-sans-uniquifier {
-    font-family: "Winky Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 643;
-    font-style: normal;
-  }
-
-  body {
+body {
     background-image: url("imagenes/madera.jpg");
     background-size: cover;
     background-attachment: fixed;
-  }
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+}
 
 .titulo {
     display: flex;
     justify-content: center;
-    background-color: rgba(7, 196, 7, 0.432);
+    align-items: center;
+    background: linear-gradient(90deg, #ffbf00 0%, #ff8000 100%);
     border-radius: 0px 300px 0px 300px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin: 30px 0 20px 0;
+    animation: aparecer 1.2s;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 .img_titulo {
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
     margin: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px #ffbf00a0;
+    transition: transform 0.3s;
+}
+.img_titulo:hover {
+    transform: scale(1.08) rotate(-6deg);
 }
 
 .let_titulo {
     font-family: "Gravitas One", serif;
     align-self: center;
     margin: 60px;
-    color: yellow;
+    color: #fff700;
     font-size: 90px;
+    text-shadow: 3px 3px 0 #ff8000, 6px 6px 0 #000;
+    letter-spacing: 8px;
 }
 
-p {
-    color: white;
-    background-color: rgba(0, 255, 0, 0.281);
+.intro {
+    color: #fff;
+    background: rgba(0, 255, 0, 0.18);
+    border-radius: 20px;
+    padding: 18px 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 12px #0003;
+    transition: box-shadow 0.3s;
+}
+.intro:hover {
+    box-shadow: 0 4px 24px #ff800080;
 }
 
-h2 {
-    font-family: "Winky Sans", sans-serif;
-    color: rgb(204, 204, 0)
+.enlace-scratch {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.btn-scratch {
+    display: flex;
+    align-items: center;
+    background: #ff8000;
+    border-radius: 40px;
+    padding: 10px 30px;
+    box-shadow: 0 2px 12px #0004;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    gap: 20px;
+}
+.btn-scratch:hover {
+    background: #ffbf00;
+    transform: scale(1.05);
+}
+.letras {
+    width: 220px;
+    height: 60px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.btn-scratch span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .lista {
-    background-color: rgba(0, 255, 0, 0.281);
+    background: rgba(0, 255, 0, 0.22);
+    border-radius: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 12px #0002;
+    padding: 20px 40px;
+    animation: aparecer 1.5s;
 }
-
-.letras {
-    width: 700px;
-    height: 200px;
+.lista ul {
+    color: #fff;
+    font-size: 1.1em;
+    padding-left: 25px;
 }
-
-.nombre {
-    background-color: rgba(65, 105, 225, 0.452);
+.lista li {
+    margin-bottom: 12px;
+    transition: transform 0.2s, color 0.2s;
+}
+.lista li:hover {
+    color: #ffbf00;
+    transform: translateX(10px) scale(1.03);
+}
+.lista h2 {
+    font-family: "Winky Sans", sans-serif;
+    color: #ff8000;
     text-align: center;
-    border-radius: 50px;
+    margin-bottom: 18px;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.faq-container {
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 12px #0002;
+    padding: 20px 40px;
+}
+.faq-container h2 {
+    color: #ff8000;
+    text-align: center;
+    font-family: "Winky Sans", sans-serif;
+    margin-bottom: 18px;
+}
+.faq {
+    margin-bottom: 10px;
+}
+.faq-question {
+    width: 100%;
+    background: #ffbf00;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 18px;
+    font-size: 1.1em;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 4px #0002;
+}
+.faq-question.active, .faq-question:hover {
+    background: #ff8000;
+}
+.faq-answer {
+    display: none;
+    background: #fffbe6;
+    color: #333;
+    border-radius: 0 0 20px 20px;
+    padding: 12px 18px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    box-shadow: 0 1px 4px #0001;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0 10px 0;
+    background: rgba(65, 105, 225, 0.452);
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 -2px 12px #0002;
+    text-align: center;
+}
+.nombre {
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    margin: 0;
+    background: none;
+    border-radius: 0;
 }
 
 ul {
